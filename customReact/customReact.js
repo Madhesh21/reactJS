@@ -12,7 +12,7 @@ function customRender(El, cont)
 const Elements =  {
   type: 'a',
   props: {
-    href: 'https://google.com',
+    href: 'https://amazon.com',
     target: '_blank'
   },
   text: "click here"
