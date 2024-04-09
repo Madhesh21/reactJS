@@ -1,1 +1,1 @@
-# Starting up with React JS.
+# Starting up with React JS with Vite.
