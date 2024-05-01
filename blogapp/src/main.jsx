@@ -8,12 +8,12 @@ import store from "./store/store.js";
 
 import Home from "./pages/Home.jsx";
 import Login from "./pages/Login.jsx";
-import Protected from "./components/AuthLayout.jsx";
 import Signup from "./pages/Signup.jsx";
 import AllPosts from "./pages/AllPosts.jsx";
 import AddPost from "./pages/AddPost.jsx";
 import EditPost from "./pages/EditPost.jsx";
 import Post from "./pages/Post.jsx";
+import Protected from "./components/AuthLayout.jsx";
 
 
 

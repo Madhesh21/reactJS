@@ -1,5 +1,6 @@
+// start with appwrite auth service
+import conf from "../conf/conf.js";
 import { Client, Account, ID } from "appwrite";
-import conf from "../conf/conf";
 
 export class AuthService {
   client = new Client();
@@ -29,7 +30,6 @@ export class AuthService {
       throw error;
     }
   }
-
   async login({ email, password }) {
     try {
       return await this.account.createEmailSession(email, password);
@@ -37,25 +37,23 @@ export class AuthService {
       throw error;
     }
   }
-
   async getCurrentUser() {
     try {
-      return await this.account.get()
+      return await this.account.get();
     } catch (error) {
-      console.log("AppwriteService :: getCurrentUser() ::", error)
+      console.log("Appwrite service :: getCurrentUser() :: ", error);
     }
-    return null
+    return null;
   }
-
-  async logout(){
+  async logout() {
     try {
-      return await this.account.deleteSessions()
+      await this.account.deleteSessions();
     } catch (error) {
-      console.log("AppwriteService :: logout() ::", error)
+      console.log("Appwrite service :: logout() :: ", error);
     }
   }
 }
 
-const authService = new AuthService()
+const authService = new AuthService();
 
-export default authService
+export default authService;
